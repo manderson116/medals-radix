@@ -20,16 +20,19 @@ function App() {
   }
 
   return (
-    <div className="countries">
-      {countries.map((country) => (
-        <Country
-          onDelete={handleDelete}
-          key={country.id}
-          country={country}
-          medals={medals.current}
-        />
-      ))}
-    </div>
+    <>
+      <h1 id="page-header">Olympic Medals</h1>
+      <div className="countries">
+        {countries.map((country) => (
+          <Country
+            onDelete={handleDelete}
+            key={country.id}
+            country={country}
+            medals={medals.current}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

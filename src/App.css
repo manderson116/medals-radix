@@ -1,3 +1,6 @@
+#page-header {
+  padding: 0.5rem;
+}
 .country {
   border-radius: 0.5rem;
   border: black solid 1px;

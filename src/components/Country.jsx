@@ -1,3 +1,5 @@
+import Medal from "./Medal";
+
 function Country(props) {
   return (
     <div className="country">
@@ -10,7 +12,9 @@ function Country(props) {
           🗑️
         </div>
       </div>
-      <div className="medals">Gold medals: {props.country.gold}</div>
+      {props.medals.map((medal) => (
+        <Medal key={medal.id} medal={medal} />
+      ))}
     </div>
   );
 }

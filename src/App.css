@@ -25,7 +25,10 @@
   background-color: white;
   border-radius: inherit;
 }
-.country > .medals > button {
+.country > .medals > .button {
+  display: flex;
+}
+.country > .medals > .button > button {
   padding: 0.25rem;
   width: 1.5rem;
 }

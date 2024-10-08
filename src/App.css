@@ -32,6 +32,9 @@
   padding: 0.25rem;
   width: 1.5rem;
 }
+.country > .medals > .button > button:disabled {
+  background-color: #999999;
+}
 .countries {
   padding: 0.5rem;
   display: flex;

@@ -11,6 +11,7 @@ function App() {
 
   function handleDelete(id) {
     console.log(`delete country: ${id}`);
+    setCountries(countries.filter((c) => c.id !== id));
   }
 
   return (

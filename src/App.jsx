@@ -9,8 +9,8 @@ function App() {
     { id: 3, name: "France", gold: 0 },
   ]);
 
-  function handleDelete() {
-    console.log("delete country");
+  function handleDelete(id) {
+    console.log(`delete country: ${id}`);
   }
 
   return (

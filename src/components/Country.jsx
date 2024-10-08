@@ -3,7 +3,10 @@ function Country(props) {
     <div className="country">
       <div className="header">
         <h2>{props.country.name}</h2>
-        <div className="basket" onClick={props.onDelete}>
+        <div
+          className="basket"
+          onClick={() => props.onDelete(props.country.id)}
+        >
           🗑️
         </div>
       </div>

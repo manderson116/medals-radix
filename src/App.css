@@ -1,5 +1,4 @@
 .country {
-  margin: 0.5rem;
   border-radius: 0.5rem;
   border: black solid 1px;
   background: #efefef;
@@ -20,4 +19,9 @@
 .country > div > button {
   padding: 0.25rem;
   width: 1.5rem;
+}
+.countries {
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Country() {
+function Country(props) {
   const [name, setName] = useState("United States");
   const [gold, setGold] = useState(0);
 
@@ -10,9 +10,9 @@ function Country() {
 
   return (
     <div className="country">
-      <h2>{name}</h2>
+      <h2>{props.country.name}</h2>
       <div>
-        Gold medals: {gold}
+        Gold medals: {props.country.gold}
         <button onClick={handleClick}>+</button>
       </div>
     </div>

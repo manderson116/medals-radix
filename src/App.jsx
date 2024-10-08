@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="countries">
       {countries.map((country) => (
-        <Country key={country.id} />
+        <Country key={country.id} country={country} />
       ))}
     </div>
   );

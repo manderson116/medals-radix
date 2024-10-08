@@ -18,10 +18,17 @@ function App() {
     console.log(`delete country: ${id}`);
     setCountries(countries.filter((c) => c.id !== id));
   }
+  function getAllMedalsTotal() {
+    let sum = 0;
+    medals.current.forEach((medal) => {
+      sum += countries.reduce((a, b) => a + b[medal.name], 0);
+    });
+    return sum;
+  }
 
   return (
     <>
-      <h1 id="page-header">Olympic Medals</h1>
+      <h1 id="page-header">Olympic Medals {getAllMedalsTotal()}</h1>
       <div className="countries">
         {countries.map((country) => (
           <Country

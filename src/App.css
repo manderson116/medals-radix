@@ -5,7 +5,7 @@
   border-radius: 0.5rem;
   border: black solid 1px;
   background: #efefef;
-  width: 16rem;
+  min-width: 16rem;
 }
 .country > .header {
   display: flex;
@@ -36,6 +36,7 @@
   background-color: #999999;
 }
 .countries {
+  flex-wrap: wrap;
   padding: 0.5rem;
   display: flex;
   gap: 0.5rem;

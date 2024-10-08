@@ -8,10 +8,15 @@ function App() {
     { id: 2, name: "China", gold: 3 },
     { id: 3, name: "France", gold: 0 },
   ]);
+
+  function handleDelete() {
+    console.log("delete country");
+  }
+
   return (
     <div className="countries">
       {countries.map((country) => (
-        <Country key={country.id} country={country} />
+        <Country onDelete={handleDelete} key={country.id} country={country} />
       ))}
     </div>
   );

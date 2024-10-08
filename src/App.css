@@ -1,0 +1,23 @@
+.country {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  border: black solid 1px;
+  background: #efefef;
+  width: 16rem;
+}
+.country > h2 {
+  border-bottom: black 1px solid;
+  padding: 0.35rem;
+}
+.country > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem;
+  background-color: white;
+  border-radius: inherit;
+}
+.country > div > button {
+  padding: 0.25rem;
+  width: 1.5rem;
+}

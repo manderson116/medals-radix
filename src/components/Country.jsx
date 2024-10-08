@@ -5,10 +5,13 @@ function Country() {
   const [gold, setGold] = useState(0);
 
   return (
-    <>
+    <div className="country">
       <h2>{name}</h2>
-      <div>Gold medals: {gold}</div>
-    </>
+      <div>
+        Gold medals: {gold}
+        <button>+</button>
+      </div>
+    </div>
   );
 }
 

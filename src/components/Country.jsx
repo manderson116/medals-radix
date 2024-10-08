@@ -22,7 +22,13 @@ function Country(props) {
         </div>
       </div>
       {props.medals.map((medal) => (
-        <Medal key={medal.id} medal={medal} country={props.country} />
+        <Medal
+          onIncrement={props.onIncrement}
+          onDecrement={props.onDecrement}
+          key={medal.id}
+          medal={medal}
+          country={props.country}
+        />
       ))}
     </div>
   );

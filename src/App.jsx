@@ -18,6 +18,18 @@ function App() {
     console.log(`delete country: ${id}`);
     setCountries(countries.filter((c) => c.id !== id));
   }
+  function handleIncrement(countryId, medalName) {
+    const idx = countries.findIndex((c) => c.id === countryId);
+    const mutableCountries = [...countries];
+    mutableCountries[idx][medalName] += 1;
+    setCountries(mutableCountries);
+  }
+  function handleDecrement(countryId, medalName) {
+    const idx = countries.findIndex((c) => c.id === countryId);
+    const mutableCountries = [...countries];
+    mutableCountries[idx][medalName] -= 1;
+    setCountries(mutableCountries);
+  }
   function getAllMedalsTotal() {
     let sum = 0;
     medals.current.forEach((medal) => {
@@ -33,6 +45,8 @@ function App() {
         {countries.map((country) => (
           <Country
             onDelete={handleDelete}
+            onIncrement={handleIncrement}
+            onDecrement={handleDecrement}
             key={country.id}
             country={country}
             medals={medals.current}

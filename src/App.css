@@ -4,11 +4,17 @@
   background: #efefef;
   width: 16rem;
 }
-.country > h2 {
+.country > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: black 1px solid;
   padding: 0.35rem;
 }
-.country > div {
+.country > .header > .basket {
+  cursor: pointer;
+}
+.country > .medals {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +22,7 @@
   background-color: white;
   border-radius: inherit;
 }
-.country > div > button {
+.country > .medals > button {
   padding: 0.25rem;
   width: 1.5rem;
 }

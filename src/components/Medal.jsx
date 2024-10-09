@@ -1,7 +1,7 @@
 function Medal(props) {
   return (
     <div className="medals">
-      {props.country[props.medal.name]} {props.medal.name} medals
+      {props.medal.name} medals:
       <div className="button">
         <button
           disabled={props.country[props.medal.name] === 0}
@@ -9,6 +9,7 @@ function Medal(props) {
         >
           -
         </button>
+        <div className="medal-count">{props.country[props.medal.name]}</div>
         <button
           onClick={() => props.onIncrement(props.country.id, props.medal.name)}
         >

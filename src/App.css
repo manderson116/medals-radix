@@ -25,12 +25,16 @@
   background-color: white;
   border-radius: inherit;
 }
+.country > .medals > .button > .medal-count {
+  padding: 0 0.5rem 0 0.5rem;
+}
 .country > .medals > .button {
   display: flex;
+  align-items: center;
 }
 .country > .medals > .button > button {
   padding: 0.25rem;
-  width: 1.5rem;
+  width: 1.75rem;
 }
 .country > .medals > .button > button:disabled {
   background-color: #999999;

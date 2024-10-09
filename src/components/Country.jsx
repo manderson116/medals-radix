@@ -12,8 +12,8 @@ function Country(props) {
   return (
     <div className="country">
       <div className="header">
-        <h2>{props.country.name}</h2>
-        <div>{getMedalsTotal()}</div>
+        <h3>{props.country.name}</h3>
+        <h3>{getMedalsTotal()}</h3>
         <div
           className="basket"
           onClick={() => props.onDelete(props.country.id)}

@@ -15,11 +15,14 @@ function NewCountry(props) {
     props.onAdd(newCountryName);
     hideDialog();
   }
+  function handleKeyUp(e) {
+    e.keyCode === 27 && hideDialog();
+  }
 
   return (
     <>
       {showDialog ? (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)} onKeyUp={(e) => handleKeyUp(e)}>
           <div id="overlay" onClick={hideDialog}></div>
           <div id="dialog">
             <h3>Enter new country name</h3>

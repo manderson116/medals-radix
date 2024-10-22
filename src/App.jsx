@@ -15,6 +15,9 @@ function App() {
     { id: 3, name: "bronze" },
   ]);
 
+  function handleAdd(name) {
+    console.log(`add country: ${name}`);
+  }
   function handleDelete(id) {
     console.log(`delete country: ${id}`);
     setCountries(countries.filter((c) => c.id !== id));
@@ -54,7 +57,7 @@ function App() {
           />
         ))}
       </div>
-      <NewCountry />
+      <NewCountry onAdd={handleAdd} />
     </>
   );
 }

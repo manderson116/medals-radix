@@ -2,7 +2,7 @@ import { useState } from "react";
 import trigger from "../assets/trigger.svg";
 import "./NewCountry.css";
 
-function NewCountry() {
+function NewCountry(props) {
   const [showDialog, setShowDialog] = useState(false);
   const [newCountryName, setNewCountryName] = useState("");
 
@@ -10,11 +10,16 @@ function NewCountry() {
     setNewCountryName("");
     setShowDialog(false);
   }
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.onAdd(newCountryName);
+    hideDialog();
+  }
 
   return (
     <>
       {showDialog ? (
-        <form>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <div id="overlay" onClick={hideDialog}></div>
           <div id="dialog">
             <h3>Enter new country name</h3>

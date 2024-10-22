@@ -4,6 +4,7 @@ import "./NewCountry.css";
 
 function NewCountry() {
   const [showDialog, setShowDialog] = useState(false);
+  const [newCountryName, setNewCountryName] = useState("");
 
   return (
     <>
@@ -18,6 +19,8 @@ function NewCountry() {
               placeholder="enter name"
               autoFocus
               autoComplete="off"
+              value={newCountryName}
+              onChange={(e) => setNewCountryName(e.target.value)}
             />
             <div id="buttons">
               <button type="submit" id="save">

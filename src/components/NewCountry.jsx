@@ -6,11 +6,16 @@ function NewCountry() {
   const [showDialog, setShowDialog] = useState(false);
   const [newCountryName, setNewCountryName] = useState("");
 
+  function hideDialog() {
+    setNewCountryName("");
+    setShowDialog(false);
+  }
+
   return (
     <>
       {showDialog ? (
         <form>
-          <div id="overlay"></div>
+          <div id="overlay" onClick={hideDialog}></div>
           <div id="dialog">
             <h3>Enter new country name</h3>
             <input
@@ -26,7 +31,7 @@ function NewCountry() {
               <button type="submit" id="save">
                 save
               </button>
-              <button id="cancel" type="button">
+              <button id="cancel" type="button" onClick={hideDialog}>
                 cancel
               </button>
             </div>

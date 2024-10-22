@@ -1,5 +1,6 @@
 import { useState } from "react";
 import trigger from "../assets/trigger.svg";
+import "./NewCountry.css";
 
 function NewCountry() {
   const [showDialog, setShowDialog] = useState(false);
@@ -18,7 +19,7 @@ function NewCountry() {
               autoFocus
               autoComplete="off"
             />
-            <div>
+            <div id="buttons">
               <button type="submit" id="save">
                 save
               </button>

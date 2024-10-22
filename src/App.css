@@ -45,15 +45,3 @@
   display: flex;
   gap: 0.5rem;
 }
-#trigger {
-  position: fixed;
-  left: 0.8rem;
-  bottom: 0.8rem;
-  cursor: pointer;
-  z-index: 80;
-  transform: scale(80%, 80%);
-  transition: transform 150ms ease-in-out;
-}
-#trigger:hover {
-  transform: rotate(90deg) scale(100%, 100%);
-}

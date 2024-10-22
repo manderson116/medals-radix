@@ -28,7 +28,11 @@ function NewCountry() {
               onChange={(e) => setNewCountryName(e.target.value)}
             />
             <div id="buttons">
-              <button type="submit" id="save">
+              <button
+                type="submit"
+                id="save"
+                disabled={newCountryName.trim().length === 0}
+              >
                 save
               </button>
               <button id="cancel" type="button" onClick={hideDialog}>

@@ -17,6 +17,18 @@ function App() {
 
   function handleAdd(name) {
     console.log(`add country: ${name}`);
+    setCountries(
+      [...countries].concat({
+        id:
+          countries.length === 0
+            ? 1
+            : Math.max(...countries.map((country) => country.id)) + 1,
+        name: name,
+        gold: 0,
+        silver: 0,
+        bronze: 0,
+      })
+    );
   }
   function handleDelete(id) {
     console.log(`delete country: ${id}`);

@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import Country from "./components/Country";
 import "./App.css";
+import NewCountry from "./components/NewCountry";
 
 function App() {
   const [countries, setCountries] = useState([
@@ -53,6 +54,7 @@ function App() {
           />
         ))}
       </div>
+      <NewCountry />
     </>
   );
 }

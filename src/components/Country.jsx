@@ -47,22 +47,26 @@ function Country(props) {
                 >
                   {renderSaveButton() && (
                     <>
-                      <Button
-                        color="gray"
-                        variant="ghost"
-                        size="1"
-                        onClick={() => props.onReset(props.country.id)}
-                      >
-                      <ResetIcon />
-                      </Button>
-                      <Button
-                        color="gray"
-                        variant="ghost"
-                        size="1"
-                        onClick={() => props.onSave(props.country.id)}
-                      >
-                        <CheckIcon />
-                      </Button>
+                      <Tooltip content="Revert changes">
+                        <Button
+                          color="gray"
+                          variant="ghost"
+                          size="1"
+                          onClick={() => props.onReset(props.country.id)}
+                        >
+                          <ResetIcon />
+                        </Button>
+                      </Tooltip>
+                      <Tooltip content="Save changes">
+                        <Button
+                          color="gray"
+                          variant="ghost"
+                          size="1"
+                          onClick={() => props.onSave(props.country.id)}
+                        >
+                          <CheckIcon />
+                        </Button>
+                      </Tooltip>
                     </>
                   )}
                   {props.canDelete && (
